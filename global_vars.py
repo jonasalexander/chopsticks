@@ -1,0 +1,5 @@
+DEBUG = False
+LOAD = True
+DIFF_MODELS = False
+KEEP_B_STUPID = False
+FRESH_START = False
