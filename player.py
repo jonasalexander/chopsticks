@@ -98,7 +98,7 @@ class InteractivePlayer(Player):
 		print self
 		print opponent
 		if 0 in self_state and all([i%2==0 for i in self_state]):
-			redistribute = raw_input("Do you want to redistribute your fingers?(0 for no and 1 for yes)")
+			redistribute = raw_input("Do you want to redistribute your fingers?(0 for no and 1 for yes) \n--->")
 			if redistribute == '1':
 				for i, h in enumerate(self.hands):
 					if h.num == 0:
@@ -126,7 +126,7 @@ class InteractivePlayer(Player):
 			print 'You can only use one of your hands to attack.'
 			self_choice = 1
 		else:
-			self_choice_str = raw_input('Which of your hands would you like to use to attack? (0-indexed)')
+			self_choice_str = raw_input('Which of your hands would you like to use to attack? (0-indexed) \n--->')
 			try:
 				self_choice = int(self_choice_str)
 				if self_choice not in [0, 1]:
@@ -140,13 +140,13 @@ class InteractivePlayer(Player):
 			print 'You can only attack one of your opponent\'s hands.'
 			opponent_choice = 1
 		else:
-			opponent_choice_str = raw_input('Which of your opponent\'s hands would you like to attack? (0-indexed)')
+			opponent_choice_str = raw_input('Which of your opponent\'s hands would you like to attack? (0-indexed) \n--->')
 			try:
 				opponent_choice = int(opponent_choice_str)
 				if opponent_choice not in [0, 1]:
 					raise ValueError
 			except ValueError:
-				print 'Didn\'t get a 0 or 1 as expected for opponent_choice quesiton. Exiting'
+				print 'Didn\'t get a 0 or 1 as expected for opponent_choice question. Exiting'
 				return False
 
 		opponent.hands[opponent_choice].add(self.hands[self_choice])
