@@ -1,4 +1,4 @@
-DEBUG = False
+DEBUG = True
 LOAD = True
 DIFF_MODELS = False
 KEEP_B_STUPID = False
