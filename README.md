@@ -27,16 +27,6 @@ The second decision is whether or not the agent should redistribute the fingers 
 The state dictionary used as a key for each decision is a tuple, containing the player's hand and opponents hands. Four fields that each can take values 0 through 5 makes for roughly 1,200 states to learn.
 
 
-## Global Variables
-
-The global variables are set in `global_vars.py`. These are the variables and their purpose:
-- `DEBUG`: Set to `True` to see updates every round as agents play against one another.
-- `LOAD`: Set to `True` to use model parameters written to disk from previous training runs and to write to disk after having trained.
-- `DIFF_MODELS`: Set to `True` to have separate models when two AI agents are playing against one another
-- `KEEP_B_STUPID`: Set to `True` to have the second AI player make random decisions.
-- `FRESH_START`: Set to `True` to not use weights from disk but rather start over.
-
-
 # TODO
 
 - [ ] Clean up printing/debug mode
